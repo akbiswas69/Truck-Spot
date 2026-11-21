@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truck Spot — Find Your Spot. Drive Smarter.</title>
+  
+  <!-- Google Fonts: Inter & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= 1. NAVIGATION HEADER ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-icon">
+          <img src="img/logo1.png">
+          <i data-lucide="truck"></i>
+          <span class="pin-dot"></span>
+        </div>
+        <!--
+        <span class="logo-text">Truck<span>Spot</span></span>
+        -->
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#app-preview" class="nav-link">App Preview</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#download" class="btn btn-primary mobile-only-btn">Download App</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary desktop-only-btn">Download App</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= 2. HERO SECTION ================= -->
+  <section class="hero-section" id="home">
+    <!-- Subtle Background Decorative Graphics -->
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <svg class="hero-route-svg" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-50 480 C 250 480, 350 220, 650 260 C 900 290, 1020 120, 1250 140" stroke="#FF9F1C" stroke-width="3" stroke-dasharray="10 10" stroke-opacity="0.25"/>
+      <circle cx="355" cy="315" r="8" fill="#FF9F1C" fill-opacity="0.3"/>
+      <circle cx="885" cy="225" r="10" fill="#102B46" fill-opacity="0.15"/>
+    </svg>
+
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content">
+        <div class="badge">
+          <i data-lucide="navigation" class="badge-icon"></i>
+          <span>Smart Logistics & Driver Companion</span>
+        </div>
+        <h1 class="hero-title">Find Your Spot. <br><span>Drive Smarter.</span></h1>
+        <p class="hero-subtitle">
+          Eliminate the stress of searching for overnight stops. Discover verified truck parking locations, check real-time availability, and plan your route with total confidence.
+        </p>
+
+        <div class="store-buttons">
+          <a href="#download" class="store-btn store-btn-dark">
+            <i data-lucide="apple"></i>
+            <div class="store-btn-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a href="#download" class="store-btn store-btn-outline">
+            <i data-lucide="play"></i>
+            <div class="store-btn-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <i data-lucide="check-circle-2"></i>
+            <span>Easy Route Filtering</span>
+          </div>
+          <div class="highlight-item">
+            <i data-lucide="check-circle-2"></i>
+            <span>Verified Truck Stops</span>
+          </div>
+          <div class="highlight-item">
+            <i data-lucide="check-circle-2"></i>
+            <span>24/7 Driver Access</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual: Semi-Truck Backdrop + Realistic Smartphone Mockup -->
+      <div class="hero-visual">
+        <!-- Modern Semi-Truck Visual Card/Backdrop -->
+        <div class="semi-truck-backdrop">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=900&q=80" alt="Modern Semi Truck on Highway" />
+          <div class="truck-overlay"></div>
+        </div>
+
+        <!-- Floating Pin Decoration -->
+        <div class="floating-pin pin-1">
+          <i data-lucide="map-pin"></i>
+          <div>
+            <strong>I-80 Travel Plaza</strong>
+            <span>14 Spots Open</span>
+          </div>
+        </div>
+
+        <!-- Realistic Smartphone Mockup -->
+        <div class="phone-frame hero-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- App Header -->
+            <div class="app-top-bar">
+              <div>
+                <span class="app-greeting">Good Evening, Driver</span>
+                <h4>Nearby Truck Parking</h4>
+              </div>
+              <div class="app-avatar"><i data-lucide="user"></i></div>
+            </div>
+
+            <!-- App Search -->
+            <div class="app-search-box">
+              <i data-lucide="search"></i>
+              <span>Search highway, city, or exit...</span>
+            </div>
+
+            <!-- Interactive Map Visual inside Phone -->
+            <div class="app-mini-map">
+              <div class="map-road-h"></div>
+              <div class="map-road-v"></div>
+              <div class="map-route-line"></div>
+              <div class="map-pin active-pin" style="top: 32%; left: 55%;">
+                <i data-lucide="truck"></i>
+              </div>
+              <div class="map-pin" style="top: 62%; left: 28%;">P</div>
+              <div class="map-pin" style="top: 22%; left: 22%;">P</div>
+              <div class="current-loc-dot"></div>
+            </div>
+
+            <!-- Nearby Parking Cards -->
+            <div class="app-card-list">
+              <div class="app-spot-card featured">
+                <div class="spot-header">
+                  <strong>Blue Ridge Truck Stop</strong>
+                  <span class="status-badge open">Available</span>
+                </div>
+                <p class="spot-meta"><i data-lucide="map-pin"></i> Exit 142 • 1.8 mi ahead</p>
+                <div class="spot-tags">
+                  <span>Showers</span>
+                  <span>Fuel</span>
+                  <span>24/7 Security</span>
+                </div>
+              </div>
+
+              <div class="app-spot-card">
+                <div class="spot-header">
+                  <strong>Apex Logistics Hub</strong>
+                  <span class="status-badge limited">4 Spots Left</span>
+                </div>
+                <p class="spot-meta"><i data-lucide="map-pin"></i> I-95 North • 4.2 mi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. FEATURES SECTION ================= -->
+  <section class="features-section section-padding" id="features">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Powerful Capabilities</span>
+        <h2 class="section-title">Everything You Need for a Smarter Journey</h2>
+        <p class="section-subtitle">Discover powerful tools designed to make truck parking and location finding easier.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="search"></i>
+          </div>
+          <h3>Smart Location Search</h3>
+          <p>Find truck parking locations easily by searching along your route, highway exit, or destination city.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="map-pin"></i>
+          </div>
+          <h3>Nearby Truck Parking</h3>
+          <p>Discover available parking near your destination with accurate distance estimates and facility details.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="radio"></i>
+          </div>
+          <h3>Real-Time Availability</h3>
+          <p>Check parking availability when supported so you never waste valuable driving hours at full lots.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="navigation"></i>
+          </div>
+          <h3>Easy Navigation</h3>
+          <p>Navigate to your selected destination smoothly with truck-friendly routing and clear turn-by-turn guidance.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="shield-check"></i>
+          </div>
+          <h3>Secure Booking</h3>
+          <p>Reserve parking securely where booking is supported, guaranteeing your spot before you arrive.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i data-lucide="bookmark"></i>
+          </div>
+          <h3>Save Favorite Spots</h3>
+          <p>Keep your preferred locations accessible with one-tap bookmarking for frequent routes and trusted stops.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. HOW IT WORKS SECTION ================= -->
+  <section class="how-section section-padding" id="how-it-works">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Simple Process</span>
+        <h2 class="section-title">Getting Started Is Easy</h2>
+        <p class="section-subtitle">Find your ideal truck parking spot in just a few simple steps.</p>
+      </div>
+
+      <div class="steps-wrapper">
+        <!-- Connecting Line (Desktop) -->
+        <div class="steps-connector"></div>
+
+        <div class="steps-grid">
+          <!-- Step 01 -->
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon-box">
+              <i data-lucide="download-cloud"></i>
+            </div>
+            <h3>Download the App</h3>
+            <p>Download Truck Spot from the App Store or Google Play and set up your truck profile in seconds.</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon-box">
+              <i data-lucide="compass"></i>
+            </div>
+            <h3>Search Your Location</h3>
+            <p>Enter your destination and discover nearby truck parking locations tailored to your route.</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon-box">
+              <i data-lucide="check-square"></i>
+            </div>
+            <h3>Choose Your Spot</h3>
+            <p>Explore available options, check amenities, and select a suitable location that fits your schedule.</p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <div class="step-icon-box">
+              <i data-lucide="truck"></i>
+            </div>
+            <h3>Hit the Road</h3>
+            <p>Follow your route directly to your chosen parking spot and enjoy a smarter, stress-free journey.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting Mini Mockup Banner -->
+      <div class="how-supporting-banner">
+        <div class="banner-text">
+          <h4>Built for Life on the Highway</h4>
+          <p>Designed with large touch targets, high-contrast maps, and clutter-free navigation for professional drivers.</p>
+        </div>
+        <div class="banner-mini-ui">
+          <div class="mini-pill"><i data-lucide="clock"></i> Avg. Search Time: &lt; 30 sec</div>
+          <div class="mini-pill"><i data-lucide="map"></i> Route-Synced Pins</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. APP PREVIEW SECTION ================= -->
+  <section class="preview-section section-padding" id="app-preview">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Inside the App</span>
+        <h2 class="section-title">Explore the Truck Spot Experience</h2>
+        <p class="section-subtitle">Everything you need to discover and manage your truck parking journey in one simple app.</p>
+      </div>
+
+      <div class="phones-showcase">
+        <!-- PHONE 1: Home Screen -->
+        <div class="phone-showcase-item">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="ui-header-navy">
+                <span class="ui-brand">Truck<span>Spot</span></span>
+                <i data-lucide="bell"></i>
+              </div>
+              <div class="ui-body">
+                <div class="ui-search-bar">
+                  <i data-lucide="search"></i>
+                  <span>Where are you headed?</span>
+                </div>
+                <div class="ui-filter-row">
+                  <span class="active">All Spots</span>
+                  <span>Rest Areas</span>
+                  <span>Fuel &amp; Food</span>
+                </div>
+                <h5 class="ui-section-label">Suggested Near You</h5>
+                <div class="ui-list-card">
+                  <div class="ui-card-top">
+                    <strong>Oak Creek Freight Stop</strong>
+                    <span class="tag-green">Open</span>
+                  </div>
+                  <p>I-40 West • 2.4 miles</p>
+                </div>
+                <div class="ui-list-card">
+                  <div class="ui-card-top">
+                    <strong>Liberty Highway Plaza</strong>
+                    <span class="tag-orange">Filling Fast</span>
+                  </div>
+                  <p>I-40 West • 6.1 miles</p>
+                </div>
+                <div class="ui-list-card">
+                  <div class="ui-card-top">
+                    <strong>Summit Truck Haven</strong>
+                    <span class="tag-green">Open</span>
+                  </div>
+                  <p>Exit 88 • 9.5 miles</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-caption">
+            <h4>1. Smart Home Dashboard</h4>
+            <p>Quick location finder and instant nearby suggestions.</p>
+          </div>
+        </div>
+
+        <!-- PHONE 2: Interactive Map (Elevated Center) -->
+        <div class="phone-showcase-item center-phone">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen map-screen-bg">
+              <div class="map-floating-search">
+                <i data-lucide="navigation"></i>
+                <span>Route: I-70 Eastbound</span>
+              </div>
+              <!-- Simulated Map Grid & Route -->
+              <div class="full-map-canvas">
+                <svg viewBox="0 0 260 360" class="phone-route-svg">
+                  <path d="M 40 330 Q 90 220, 140 180 T 210 50" stroke="#FF9F1C" stroke-width="5" fill="none" stroke-linecap="round"/>
+                  <path d="M 40 330 Q 90 220, 140 180 T 210 50" stroke="#102B46" stroke-width="2" stroke-dasharray="6 6" fill="none"/>
+                </svg>
+                <div class="pin-marker" style="top: 22%; left: 68%;"><i data-lucide="map-pin"></i></div>
+                <div class="pin-marker selected" style="top: 46%; left: 48%;"><i data-lucide="truck"></i></div>
+                <div class="pin-marker" style="top: 66%; left: 26%;"><i data-lucide="map-pin"></i></div>
+                <div class="user-pulse" style="bottom: 18%; left: 16%;"></div>
+              </div>
+              <!-- Bottom Map Drawer -->
+              <div class="map-bottom-sheet">
+                <div class="sheet-handle"></div>
+                <strong>Midwest Express Parking</strong>
+                <span>0.5 mi off Exit 210 • 12 Spots Open</span>
+                <div class="ui-btn-orange">View Spot</div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-caption">
+            <h4>2. Interactive Route Map</h4>
+            <p>Live parking pins, current location, and route tracking.</p>
+          </div>
+        </div>
+
+        <!-- PHONE 3: Parking Details Screen -->
+        <div class="phone-showcase-item">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="detail-hero-banner">
+                <span class="detail-badge">Verified Facility</span>
+                <h4>Heartland Truck Plaza</h4>
+                <p><i data-lucide="map-pin"></i> 4500 Interstate Blvd, Exit 19</p>
+              </div>
+              <div class="ui-body">
+                <div class="detail-stats-row">
+                  <div>
+                    <small>Status</small>
+                    <strong class="text-green">18 Spots</strong>
+                  </div>
+                  <div>
+                    <small>Distance</small>
+                    <strong>3.2 mi</strong>
+                  </div>
+                  <div>
+                    <small>Access</small>
+                    <strong>24/7</strong>
+                  </div>
+                </div>
+                <h5 class="ui-section-label">Available Facilities</h5>
+                <div class="amenities-grid">
+                  <span><i data-lucide="fuel"></i> Diesel</span>
+                  <span><i data-lucide="coffee"></i> Dining</span>
+                  <span><i data-lucide="shield"></i> Lit Lot</span>
+                  <span><i data-lucide="wifi"></i> Wi-Fi</span>
+                </div>
+                <div class="ui-btn-navy">
+                  <i data-lucide="navigation"></i> Start Navigation
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-caption">
+            <h4>3. Detailed Spot Overview</h4>
+            <p>Amenities, spot availability, and one-tap navigation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. WHY CHOOSE TRUCK SPOT ================= -->
+  <section class="why-section section-padding" id="about">
+    <div class="container why-grid">
+      <!-- Left Column: Truck Illustration & Decorative Pins -->
+      <div class="why-visual">
+        <div class="why-bg-shape"></div>
+        <div class="why-image-card">
+          <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=80" alt="Commercial Truck Fleet on Route" />
+          <div class="why-route-overlay">
+            <div class="route-badge">
+              <i data-lucide="map-pin"></i>
+              <span>Smart Route Optimization</span>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative Floating Card -->
+        <div class="why-float-card">
+          <div class="float-icon"><i data-lucide="shield-check"></i></div>
+          <div>
+            <strong>Driver-First Design</strong>
+            <span>Built specifically for commercial trucking</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 4 Major Benefits -->
+      <div class="why-content">
+        <span class="section-tag">Why Choose Truck Spot?</span>
+        <h2 class="section-title">Your Journey Deserves a Smarter Parking Solution</h2>
+        <p class="section-subtitle">Truck Spot is designed to simplify your parking experience and help you plan with confidence.</p>
+
+        <div class="benefits-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i data-lucide="clock"></i>
+            </div>
+            <div>
+              <h4>Save Valuable Time</h4>
+              <p>Discover convenient truck parking options quickly without circling full rest areas or wasting drive-time hours.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i data-lucide="search-check"></i>
+            </div>
+            <div>
+              <h4>Easy Location Discovery</h4>
+              <p>Find suitable locations with simple search tools filtered by highway corridor, distance, and essential amenities.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i data-lucide="route"></i>
+            </div>
+            <div>
+              <h4>Better Journey Planning</h4>
+              <p>Plan your stops more efficiently ahead of time so your rest breaks align seamlessly with your delivery schedule.</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <i data-lucide="smartphone"></i>
+            </div>
+            <div>
+              <h4>Driver-Friendly Experience</h4>
+              <p>Enjoy a simple and intuitive mobile interface crafted for effortless readability and stress-free daily use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. TESTIMONIALS SECTION ================= -->
+  <section class="testimonials-section section-padding">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Driver Feedback</span>
+        <h2 class="section-title">What Drivers Say About Truck Spot</h2>
+        <p class="section-subtitle">Real experiences from drivers who enjoy a smarter way to discover truck parking.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="quote-icon"><i data-lucide="quote"></i></div>
+          <div class="stars">
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+          </div>
+          <p class="testimonial-text">
+            "Finding suitable truck parking is easier when everything is organized in one place."
+          </p>
+          <div class="driver-info">
+            <div class="driver-avatar">MR</div>
+            <div>
+              <h5>Marcus Reynolds</h5>
+              <span>Long-Haul Fleet Driver</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="quote-icon"><i data-lucide="quote"></i></div>
+          <div class="stars">
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+          </div>
+          <p class="testimonial-text">
+            "The simple interface makes it easy to explore locations and plan my stops."
+          </p>
+          <div class="driver-info">
+            <div class="driver-avatar">DC</div>
+            <div>
+              <h5>David Kowalski</h5>
+              <span>Owner-Operator</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="quote-icon"><i data-lucide="quote"></i></div>
+          <div class="stars">
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+          </div>
+          <p class="testimonial-text">
+            "I love having useful parking information right at my fingertips."
+          </p>
+          <div class="driver-info">
+            <div class="driver-avatar">SJ</div>
+            <div>
+              <h5>Sarah Jenkins</h5>
+              <span>Regional Freight Driver</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 8. APP DOWNLOAD CTA SECTION ================= -->
+  <section class="cta-section" id="download">
+    <div class="cta-glow-orange"></div>
+    <div class="container cta-grid">
+      <!-- Left Content -->
+      <div class="cta-content">
+        <span class="cta-badge">Available on iOS &amp; Android</span>
+        <h2>Ready to Find Your Perfect Truck Spot?</h2>
+        <p>
+          Make every journey easier with Truck Spot. Discover convenient parking locations and plan your next stop with confidence.
+        </p>
+
+        <div class="store-buttons">
+          <a href="#" class="store-btn store-btn-orange">
+            <i data-lucide="apple"></i>
+            <div class="store-btn-text">
+              <small>Download on the</small>
+              <strong>App Store</strong>
+            </div>
+          </a>
+          <a href="#" class="store-btn store-btn-white">
+            <i data-lucide="play"></i>
+            <div class="store-btn-text">
+              <small>Get it on</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual: Smartphone + Truck Graphic -->
+      <div class="cta-visual">
+        <div class="cta-road-graphic">
+          <i data-lucide="truck" class="cta-truck-icon"></i>
+          <div class="cta-dashed-road"></div>
+          <i data-lucide="map-pin" class="cta-pin-icon"></i>
+        </div>
+
+        <div class="phone-frame cta-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="cta-app-header">
+              <i data-lucide="truck"></i>
+              <span>Truck Spot Ready</span>
+            </div>
+            <div class="cta-app-card">
+              <span class="status-badge open">Spot Reserved</span>
+              <h4>Crossroads Travel Center</h4>
+              <p>Bay #14 • Confirmed for Tonight</p>
+              <div class="ui-btn-orange">Open Route</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. FOOTER SECTION ================= -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand-col">
+          <a href="#home" class="brand-logo footer-logo">
+            <div class="logo-icon">
+              <i data-lucide="truck"></i>
+              <span class="pin-dot"></span>
+            </div>
+            <span class="logo-text">Truck<span>Spot</span></span>
+          </a>
+          <p class="footer-tagline">Find Your Spot. Drive With Confidence.</p>
+          <p class="footer-desc">
+            Modern logistics and truck parking discovery platform built to help professional drivers find safe, convenient stops effortlessly.
+          </p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Resources -->
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#download">Download App</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="contact-list">
+            <li>
+              <i data-lucide="mail"></i>
+              <span>support@truckspotapp.com</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <span>+8801712123280</span>
+            </li>
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>1200 Logistics Way, Suite 400,<br>Dallas, TX 75201</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2026 Truck Spot. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span>•</span>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Initialize Lucide Icons & Mobile Menu Script -->
+  <script>
+    lucide.createIcons();
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Sticky Navbar shadow on scroll
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
